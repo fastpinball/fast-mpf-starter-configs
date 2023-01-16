@@ -1,3 +1,5 @@
+#config_version=5
+
 lights:
   led1:
     number: exp-71-i0-b0-p1-1
