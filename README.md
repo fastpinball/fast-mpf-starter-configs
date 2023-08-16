@@ -8,7 +8,7 @@ The `hardware-tests` folder contains config files you can use to test your MPF i
 
 ### Step 1. Connect to your Neuron via a terminal emulator
 
-We have a getting started guide [here] which shows you how to power up your Neuron and connect via a terminal emulator. So make sure you can do that first.
+We have a getting started guide [here](https://fastpinball.com/learning/tutorials/connecting-fast-neuron/) which shows you how to power up your Neuron and connect via a terminal emulator. So make sure you can do that first.
 
 These hardware tests will cycle the first LED in the chain on every port through a few colors. So plug in at least one LED to one of the ports on the Neuron and any external expansion boards you have.
 
@@ -53,20 +53,21 @@ Open a command prompt and navigate to the `hardware-tests` folder from this repo
 * `-b` means MPF will not try to connect to a media controller
 * `-t` means MPF will not run the text UI, and will instead show the logs in the console
 * `-c` means MPF will use the config file you specify
+* You can stack multiple parameters so `-b -t -c` is the same as `-btc`, etc.
 
-So depending on your hardware configuration, you'll run one of the following commands:
+Depending on your hardware configuration, you'll run one of the following commands:
 
 **Neuron Only**
 
-    mpf -bt -c neuron
+    mpf -btc neuron
 
 **Neuron with FP-EXP-0071 expansion board**
 
-    mpf -bt -c neuron-0071
+    mpf -btc neuron-0071
 
 **Neuron with FP-EXP-0081 expansion board**
 
-    mpf -bt -c neuron-0081
+    mpf -btc neuron-0081
 
 ### Step 6. Enjoy!
 
