@@ -1,4 +1,4 @@
-#config_version=5
+#config_version=6
 
 # To use this file with your own hardware, change the following lines:
 # NET port: (line 19)
@@ -21,10 +21,11 @@ fast:
   exp:
     # debug: true      # uncomment to see full EXP serial communication in the log. Search for `[EXP]`
     port: /dev/tty.usbmodem14603     # Change me!
+    debug: true
     boards:
       neuron:
         model: FP-EXP-2000
-      0081:
+      '0081':
         model: FP-EXP-0081
 
 lights:
