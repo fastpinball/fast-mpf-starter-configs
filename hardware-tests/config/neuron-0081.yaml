@@ -1,10 +1,9 @@
 #config_version=6
 
-# To use this file with your own hardware, change the following lines:
-# NET port: (line 19)
-# EXP port: (line 23)
+# To use this file with your own hardware:
 # Connect the Neuron via USB, plug in some LEDs
-# Then run via `mpf -bt -c neuron-0081`  The first LED of each port should light up in red, green, blue, white cycling on 1s intervals
+# cd into the fast-mpf-starter-configs folder
+# Then run via `mpf -btc neuron-0081`  The first LED of each port should light up in red, green, blue, white cycling on 1s intervals
 
 hardware:
     platform: fast
@@ -14,14 +13,11 @@ mpf:
 
 fast:
   net:
-    # debug: true      # uncomment to see full NET serial communication in the log. Search for `[NET]`
+    debug: false      # change to true to see full NET serial communication in the log. Search for `[NET]`
     controller: neuron
-    port: /dev/tty.usbmodem14601     # Change me!
 
   exp:
-    # debug: true      # uncomment to see full EXP serial communication in the log. Search for `[EXP]`
-    port: /dev/tty.usbmodem14603     # Change me!
-    debug: true
+    debug: false      # change to true to see full EXP serial communication in the log. Search for `[EXP]`
     boards:
       neuron:
         model: FP-EXP-2000
