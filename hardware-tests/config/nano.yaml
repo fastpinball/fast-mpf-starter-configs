@@ -1,9 +1,9 @@
 #config_version=6
 
 # To use this file with your own hardware:
-# Connect the Neuron via USB, plug in some LEDs
+# Connect the Nano via USB, plug in some LEDs
 # cd into the fast-mpf-starter-configs folder
-# Run `mpf -btc neuron`  The first LED of each port should light up in red, green, blue, white cycling on 1s intervals
+# Run `mpf -btc nano`  The first LED of each port should light up in red, green, blue, white cycling on 1s intervals
 
 hardware:
     platform: fast
@@ -15,24 +15,21 @@ fast:
   net:
     debug: false      # change to true to see full NET serial communication in the log. Search for `[NET]`
     # port: /dev/cu.usbmodem14601
-    controller: neuron
+    controller: nano
 
-  exp:
+  rgb:
     debug: false      # change to true to see full EXP serial communication in the log. Search for `[EXP]`
     # port: /dev/cu.usbmodem14603
-    boards:
-      neuron:
-        model: FP-EXP-2000
 
 lights:
   led1-1:
-    number: neuron-1-1  # Neuron LED Port 1, first LED in the chain
+    number: 1-1  # Nano LED Port 1, first LED in the chain
   led2-1:
-    number: neuron-2-1  # Neuron LED Port 2, first LED in the chain
+    number: 2-1  # Nano LED Port 2, first LED in the chain
   led3-1:
-    number: neuron-3-1  # Neuron LED Port 3, first LED in the chain
+    number: 3-1  # Nano LED Port 3, first LED in the chain
   led4-1:
-    number: neuron-4-1  # Neuron LED Port 4, first LED in the chain
+    number: 4-1  # Nano LED Port 4, first LED in the chain
 
 show_player:
   mode_attract_started: startup
